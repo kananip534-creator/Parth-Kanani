@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parth Kanani — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1020;--card:#131a33;--ink:#eef2ff;--muted:#9aa6cf;--blue:#2f6bff;--sky:#6fb1ff;--line:#243058;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f1f5ff;--card:#fff;--ink:#0b1020;--muted:#4b5780;--blue:#1f56e0;--sky:#1f56e0;--line:#cfd9f5}}
+:root[data-theme="light"]{--bg:#f1f5ff;--card:#fff;--ink:#0b1020;--muted:#4b5780;--blue:#1f56e0;--sky:#1f56e0;--line:#cfd9f5}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px}
+nav b{font-family:Anton,Impact,sans-serif;font-size:1.3rem;letter-spacing:.04em}
+nav div{display:flex;gap:16px;font-size:.95rem;overflow-x:auto}
+nav a{text-decoration:none;color:var(--muted);white-space:nowrap}
+nav a:hover{color:var(--sky)}
+.d{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;margin:0}
+.hero{padding:48px 0 56px}
+.hero small{color:var(--sky);font-weight:700}
+.hero h1{font-size:clamp(3.6rem,18vw,9rem);margin:10px 0 18px;letter-spacing:.01em}
+.hero h1 span{color:var(--blue)}
+.hero p{max-width:36ch;color:var(--muted);font-size:1.15rem;margin:0 0 26px}
+.btn{display:inline-block;background:var(--blue);color:#fff;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn.o{background:transparent;border:2px solid var(--line);color:var(--ink);margin-left:8px}
+.tick{background:var(--blue);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0}
+.tick div{display:inline-block;animation:m 22s linear infinite;font-family:Anton,Impact,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.tick span{margin:0 22px}
+@keyframes m{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.tick div{animation:none}}
+section{padding:60px 0}
+h2{font-size:clamp(2.2rem,9vw,3.6rem);margin-bottom:10px}
+h2 em{color:var(--blue);font-style:normal}
+.sub{color:var(--muted);margin:0 0 28px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.stats div{background:var(--card);border-radius:16px;padding:18px;text-align:center}
+.stats b{display:block;font-family:Anton,Impact,sans-serif;font-size:2rem;color:var(--sky);font-weight:400}
+.stats span{font-size:.85rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border-radius:18px;padding:22px;border:1px solid var(--line)}
+.card h3{margin:0 0 6px;font-size:1.2rem}
+.card p{margin:0;color:var(--muted);font-size:.97rem}
+.th{height:150px;border-radius:12px;margin-bottom:14px;display:flex;align-items:flex-end;padding:14px;font-family:Anton,Impact,sans-serif;font-size:1.7rem;text-transform:uppercase;color:#fff}
+.t1{background:linear-gradient(135deg,#1b3fd1,#6fb1ff)}.t2{background:linear-gradient(135deg,#0b1020,#2f6bff)}.t3{background:linear-gradient(160deg,#4a7dff,#14224f)}
+.t4{background:linear-gradient(135deg,#0e2a6b,#39a0ff)}.t5{background:linear-gradient(135deg,#1d1f5c,#5b6bff)}.t6{background:linear-gradient(135deg,#123a8a,#0b1020)}
+.ep{color:var(--sky);font-weight:700;font-size:.9rem}
+.steps{display:grid;gap:12px}
+.step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border-left:4px solid var(--blue);border-radius:12px;padding:18px}
+.step b{font-family:Anton,Impact,sans-serif;font-weight:400;color:var(--sky);font-size:1.4rem}
+.step h3{margin:0}.step p{margin:2px 0 0;color:var(--muted)}
+.pr .card.hot{border-color:var(--blue);box-shadow:0 0 0 2px var(--blue)}
+.pr .amt{font-family:Anton,Impact,sans-serif;font-size:2.2rem;color:var(--sky);margin:6px 0 10px}
+.pr ul{padding-left:18px;margin:0 0 16px;color:var(--muted)}
+details{background:var(--card);border-radius:14px;padding:16px 18px;margin-bottom:10px;border:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--muted);margin:10px 0 0}
+form{display:grid;gap:12px;max-width:520px}
+input,select,textarea{width:100%;padding:14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+.mail{font-family:Anton,Impact,sans-serif;font-size:clamp(1.3rem,6vw,2.2rem);color:var(--sky);word-break:break-all;display:block;margin:6px 0 24px}
+footer{border-top:1px solid var(--line);padding:26px 0 36px;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+body.ld{overflow:hidden}
+#ld{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:transform .9s cubic-bezier(.77,0,.18,1);animation:fail 0s 8s forwards}
+#ld.out{transform:translateY(-100%)}
+@keyframes fail{to{visibility:hidden;pointer-events:none}}
+.logo{width:72px;height:72px;border-radius:50%;border:3px solid var(--blue);display:grid;place-items:center;font-family:Anton,Impact,sans-serif;font-size:1.6rem;color:var(--ink);position:relative;flex:none}
+.logo::after{content:"";position:absolute;inset:-10px;border-radius:50%;border:2px solid var(--blue);animation:ring 1.8s ease-out infinite}
+@keyframes ring{from{transform:scale(.85);opacity:.7}to{transform:scale(1.35);opacity:0}}
+.cnt{font-family:Anton,Impact,sans-serif;font-size:clamp(4rem,22vw,8rem);line-height:1;color:var(--sky)}
+.bar{width:min(260px,70vw);height:4px;background:var(--line);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--blue)}
+.lt{color:var(--muted);letter-spacing:.1em}
+#pg{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:var(--blue);z-index:50}
+.intro{display:flex;flex-direction:column;align-items:flex-start;gap:18px;margin-bottom:30px}
+.pf{font-family:Anton,Impact,sans-serif;font-size:clamp(1.6rem,8vw,2.6rem);letter-spacing:.35em;color:var(--sky)}
+.pf .l{display:inline-block;opacity:0;transform:translateY(30px)}
+body.go .pf .l{animation:up .6s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*70ms + 250ms)}
+.intro .logo{opacity:0;transform:scale(.4)}
+body.go .intro .logo{animation:up .8s cubic-bezier(.3,1.4,.5,1) 1.1s forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.hi{opacity:0;transform:translateY(26px)}
+body.go .hi{animation:up .8s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(1.4s + var(--i)*120ms)}
+.hero{position:relative}
+.hero::before{content:"";position:absolute;right:-80px;top:20px;width:320px;height:320px;background:radial-gradient(circle,var(--blue),transparent 65%);opacity:.35;filter:blur(30px);animation:fl 7s ease-in-out infinite alternate;z-index:-1;pointer-events:none}
+@keyframes fl{to{transform:translate(-40px,50px) scale(1.2)}}
+.hero h1 span{background:linear-gradient(90deg,var(--blue),var(--sky),var(--blue));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 4s linear infinite}
+@keyframes sh{to{background-position:200% center}}
+.btn{transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px -8px var(--blue)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .7s,transform .7s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s}
+.rv.in{opacity:1;transform:none}
+.card.in:hover{transform:translateY(-8px);border-color:var(--blue);box-shadow:0 14px 30px -12px var(--blue)}
+.step.in:hover{transform:translateX(8px)}
+.th{position:relative;overflow:hidden;transition:transform .5s}
+.card:hover .th{transform:scale(1.04)}
+.th::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg)}
+.card:hover .th::after{animation:gl .9s}
+@keyframes gl{to{left:130%}}
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 16px;-webkit-overflow-scrolling:touch}
+.reel{flex:0 0 190px;aspect-ratio:9/16;border-radius:20px;border:1px solid var(--line);position:relative;overflow:hidden;scroll-snap-align:start;color:#fff;background:var(--g);background-size:200% 200%;animation:gs 6s ease infinite;cursor:pointer;font:inherit;text-align:left;padding:14px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .3s}
+.reel:hover{transform:translateY(-6px) scale(1.02)}
+.reel:nth-child(1){--g:linear-gradient(160deg,#1b3fd1,#6fb1ff,#1b3fd1)}.reel:nth-child(2){--g:linear-gradient(160deg,#0b1020,#2f6bff,#0b1020)}.reel:nth-child(3){--g:linear-gradient(160deg,#14224f,#4a7dff,#14224f)}.reel:nth-child(4){--g:linear-gradient(160deg,#0e2a6b,#39a0ff,#0e2a6b)}.reel:nth-child(5){--g:linear-gradient(160deg,#1d1f5c,#5b6bff,#1d1f5c)}
+@keyframes gs{50%{background-position:100% 100%}}
+.rt{font-family:Anton,Impact,sans-serif;font-size:1.7rem;text-transform:uppercase;line-height:1}
+.rp{align-self:center;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.25);display:grid;place-items:center;animation:pl 2s ease-in-out infinite}
+.rm{font-size:.85rem;opacity:.9}
+#pl{position:fixed;inset:0;z-index:90;background:rgba(5,8,20,.93);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;padding:20px}
+#pl[hidden]{display:none}
+.stage{width:min(300px,78vw);aspect-ratio:9/16;border-radius:22px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;background:var(--g);background-size:200% 200%;animation:gs 5s ease infinite}
+.cap{font-family:Anton,Impact,sans-serif;font-size:2.2rem;text-transform:uppercase;line-height:1.15;color:#fff}
+.cap b{display:inline-block;font-weight:400;margin:0 .15em;animation:wp .35s cubic-bezier(.3,1.6,.5,1) both}
+.cap b.hl{color:#bfe0ff}
+@keyframes wp{from{opacity:0;transform:scale(.4) translateY(14px)}to{opacity:1;transform:none}}
+.pb{position:absolute;top:12px;left:14px;right:14px;height:4px;background:rgba(255,255,255,.3);border-radius:4px;overflow:hidden}
+.pb i{display:block;height:100%;width:0;background:#fff}
+.wm{position:absolute;bottom:12px;left:0;right:0;font-size:.75rem;color:rgba(255,255,255,.7)}
+#px{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:10px 22px;font:inherit;font-weight:700;cursor:pointer}
+.amt small{font-size:1rem;color:var(--muted);font-family:"DM Sans",system-ui,sans-serif}
+.th::before{content:"▶";position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-size:.8rem;animation:pl 2s ease-in-out infinite}
+@keyframes pl{50%{transform:scale(1.15);background:rgba(255,255,255,.38)}}
+.btn{position:relative;overflow:hidden}
+.btn:not(.o)::after{content:"";position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);animation:gl 3.2s ease-in-out infinite}
+.pr .card.hot{animation:gw 2.6s ease-in-out infinite}
+@keyframes gw{50%{box-shadow:0 0 0 2px var(--blue),0 0 28px 2px var(--blue)}}
+@media (prefers-reduced-motion:reduce){.th::before,.btn::after,.pr .card.hot{animation:none}#ld{display:none}.pf .l,.intro .logo,.hi,.rv{opacity:1!important;transform:none!important;animation:none!important}.hero::before,.hero h1 span,.logo::after{animation:none}}
+</style>
+</head>
+<body class="ld">
+<div id="ld"><div class="logo">PK</div><div class="cnt"><span id="cnt">0</span>%</div><div class="bar"><i id="lb"></i></div><div class="lt" id="lt">Importing footage…</div></div>
+<div id="pg"></div>
+<div class="w">
+<nav><b>PK</b><div><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+<div class="intro"><div class="pf" id="pf">PORTFOLIO</div><div class="logo">PK</div></div>
+<small>Hello, I’m</small>
+<h1 class="d">Parth <span>Kanani</span></h1>
+<p>Video editor for local businesses and creators. Clean cuts, on-time delivery and honest pricing.</p>
+<a class="btn" href="#work">See my work</a><a class="btn o" href="#contact">Let’s talk</a>
+</header>
+</div>
+<div class="tick" aria-hidden="true"><div><span>Reels</span><span>YouTube Shorts</span><span>Motion graphics</span><span>Captions</span><span>Websites</span><span>Reels</span><span>YouTube Shorts</span><span>Motion graphics</span><span>Captions</span><span>Websites</span><span>Reels</span><span>YouTube Shorts</span><span>Motion graphics</span><span>Captions</span><span>Websites</span><span>Reels</span><span>YouTube Shorts</span><span>Motion graphics</span><span>Captions</span><span>Websites</span></div></div>
+
+<div class="w">
+<section id="about">
+<h2 class="d">The story <em>so far</em></h2>
+<p class="sub" style="max-width:52ch">I’m a video editor working with local shops, brands and creators. You shoot it, I shape it: sharp cuts, clean captions and balanced sound, delivered on time at fair prices. Every project gets my full attention.</p>
+<div class="stats"><div><b>24h</b><span>Reply time</span></div><div><b>1</b><span>Free revision</span></div><div><b>1080p</b><span>Full HD export</span></div></div>
+</section>
+
+<section id="work">
+<h2 class="d">The <em>reel</em></h2>
+<p class="sub">Style samples. Tap any reel to play.</p>
+<div class="grid">
+<div class="rail">
+<button class="reel" data-i="0"><span class="rt">Did you know?</span><span class="rp">▶</span><span class="rm">Fact reel · 0:08</span></button>
+<button class="reel" data-i="1"><span class="rt">Fresh &amp; hot</span><span class="rp">▶</span><span class="rm">Café promo · 0:07</span></button>
+<button class="reel" data-i="2"><span class="rt">No excuses</span><span class="rp">▶</span><span class="rm">Fitness reel · 0:07</span></button>
+<button class="reel" data-i="3"><span class="rt">New drop</span><span class="rp">▶</span><span class="rm">Product promo · 0:07</span></button>
+<button class="reel" data-i="4"><span class="rt">Best advice</span><span class="rp">▶</span><span class="rm">Podcast clip · 0:08</span></button>
+</div>
+</div>
+</section>
+
+<section id="services">
+<h2 class="d">What I <em>make</em></h2>
+<p class="sub">Pick one or combine them.</p>
+<div class="grid">
+<div class="card"><span class="ep">EP.01</span><h3>Video editing</h3><p>Cuts, pacing, B-roll and transitions.</p></div>
+<div class="card"><span class="ep">EP.02</span><h3>Shorts &amp; Reels</h3><p>Vertical edits for YouTube, Instagram and TikTok.</p></div>
+<div class="card"><span class="ep">EP.03</span><h3>Motion graphics</h3><p>Animated titles, icons and explainers.</p></div>
+<div class="card"><span class="ep">EP.04</span><h3>Captions</h3><p>Animated captions in English and Hindi.</p></div>
+<div class="card"><span class="ep">EP.05</span><h3>Color &amp; sound</h3><p>Grading, clean audio and music.</p></div>
+<div class="card"><span class="ep">EP.06</span><h3>Long videos</h3><p>Landscape edits for YouTube, events and business videos.</p></div>
+</div>
+</section>
+
+<section id="process">
+<h2 class="d">The <em>timeline</em></h2>
+<p class="sub">Four steps from raw clips to final export.</p>
+<div class="steps">
+<div class="step"><b>01</b><div><h3>Share your plan</h3><p>Tell me what you need. I reply within 24 hours.</p></div></div>
+<div class="step"><b>02</b><div><h3>Send footage</h3><p>Share a Google Drive or WeTransfer link.</p></div></div>
+<div class="step"><b>03</b><div><h3>I edit</h3><p>I cut, caption and add music, then send a preview.</p></div></div>
+<div class="step"><b>04</b><div><h3>Revise and deliver</h3><p>Two free revisions, then your final file.</p></div></div>
+</div>
+</section>
+
+<section id="pricing" class="pr">
+<h2 class="d">Pick your <em>cut</em></h2>
+<p class="sub">Simple, transparent pricing. No hidden charges.</p>
+<div class="grid">
+<div class="card"><h3>Single reel</h3><div class="amt">₹300<small> / reel</small></div><ul><li>Up to 1 minute, vertical 9:16</li><li>Cuts, music and captions</li><li>1 free revision</li></ul><a class="btn" href="#contact">Book this</a></div>
+<div class="card hot"><h3>Reels pack · Best value</h3><div class="amt">₹3,500<small> / 12 reels</small></div><ul><li>12 reels, up to 1 minute each</li><li>One consistent style for your brand</li><li>Save ₹100 compared to single reels</li></ul><a class="btn" href="#contact">Book this</a></div>
+<div class="card"><h3>Long video</h3><div class="amt">₹800<small> / video</small></div><ul><li>Landscape 16:9, 3 minutes and above</li><li>Cuts, music and captions</li><li>1 free revision</li></ul><a class="btn" href="#contact">Book this</a></div>
+</div>
+<p class="sub" style="margin-top:18px">Rates are for standard edits. Custom or complex projects are quoted after I see your footage. Payment by UPI or bank transfer: 50% advance, remaining 50% after the work is completed.</p>
+</section>
+
+<section id="faq">
+<h2 class="d">Behind the <em>scenes</em></h2>
+<details><summary>How do I send my footage?</summary><p>Share a Google Drive, Dropbox or WeTransfer link. I send the finished video back the same way.</p></details>
+<details><summary>How long does a project take?</summary><p>Reels usually take 1 to 2 days. Long videos take 3 to 5 days depending on length. I confirm the date before starting.</p></details>
+<details><summary>Who owns the final video?</summary><p>You do. Once paid, it is yours to publish and monetize.</p></details>
+<details><summary>How do I pay?</summary><p>UPI or bank transfer. 50% advance to start the work and the remaining 50% after the work is completed.</p></details>
+</section>
+
+<section id="contact">
+<h2 class="d">Let’s <em>talk</em></h2>
+<a class="mail" id="ml" href="mailto:kananiparth038@gmail.com">kananiparth038@gmail.com</a>
+<form id="f">
+<input id="n" placeholder="Your name" aria-label="Your name" required>
+<select id="s" aria-label="Service"><option>Video editing</option><option>Shorts &amp; Reels</option><option>Motion graphics</option><option>Website</option><option>Something else</option></select>
+<textarea id="m" rows="4" placeholder="Tell me about your project" aria-label="Message" required></textarea>
+<button class="btn" type="submit">Send message</button>
+</form>
+</section>
+
+<footer><span>© 2026 Parth Kanani</span><a href="#top" onclick="window.scrollTo(0,0);return false">Back to top</a></footer>
+</div>
+<div id="pl" hidden><div class="stage" id="st"><div class="pb"><i id="pbi"></i></div><div class="cap" id="cap"></div><div class="wm">Style sample</div></div><button id="px" type="button">Close ✕</button></div>
+<script>
+(function(){
+var S=[{g:'linear-gradient(160deg,#1b3fd1,#6fb1ff,#1b3fd1)',l:['Did you know?','Octopuses have three hearts','Edit. Caption. Post.']},{g:'linear-gradient(160deg,#0b1020,#2f6bff,#0b1020)',l:['Fresh chai','Hot snacks','Visit us today']},{g:'linear-gradient(160deg,#14224f,#4a7dff,#14224f)',l:['No excuses','Just reps','Start today']},{g:'linear-gradient(160deg,#0e2a6b,#39a0ff,#0e2a6b)',l:['New drop','Limited stock','Order now']},{g:'linear-gradient(160deg,#1d1f5c,#5b6bff,#1d1f5c)',l:['The best advice','I ever got','Start before you are ready']}];
+var pl=document.getElementById('pl'),st=document.getElementById('st'),cap=document.getElementById('cap'),pbi=document.getElementById('pbi'),tm=[];
+function clr(){tm.forEach(clearTimeout);tm=[]}
+function play(i){clr();var s=S[i],t=0,tot=0;st.style.setProperty('--g',s.g);
+s.l.forEach(function(x){tot+=x.split(' ').length*330+900});
+s.l.forEach(function(line){var w=line.split(' '),t0=t;tm.push(setTimeout(function(){cap.innerHTML=''},t0));w.forEach(function(x,k){tm.push(setTimeout(function(){var b=document.createElement('b');b.textContent=x;if(k===w.length-1)b.className='hl';cap.appendChild(b)},t0+k*330))});t+=w.length*330+900});
+pbi.style.transition='none';pbi.style.width='0';
+requestAnimationFrame(function(){requestAnimationFrame(function(){pbi.style.transition='width '+tot+'ms linear';pbi.style.width='100%'})});
+tm.push(setTimeout(function(){play(i)},tot+600))}
+function close(){pl.hidden=true;clr();cap.innerHTML=''}
+document.querySelectorAll('.reel').forEach(function(b){b.addEventListener('click',function(){pl.hidden=false;play(+b.dataset.i)})});
+document.getElementById('px').addEventListener('click',close);
+pl.addEventListener('click',function(e){if(e.target===pl)close()});
+addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+function openMail(url,su,bd){var left=false,g='https://mail.google.com/mail/?view=cm&fs=1&to=kananiparth038@gmail.com&su='+encodeURIComponent(su||'')+'&body='+encodeURIComponent(bd||'');function lf(){left=true}addEventListener('blur',lf);document.addEventListener('visibilitychange',lf);function go(u){var a=document.createElement('a');a.href=u;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();document.body.removeChild(a)}location.href=url;setTimeout(function(){removeEventListener('blur',lf);document.removeEventListener('visibilitychange',lf);if(!left)go(g)},1600)}
+document.getElementById('ml').addEventListener('click',function(e){e.preventDefault();openMail('mailto:kananiparth038@gmail.com','','')});
+document.getElementById('f').addEventListener('submit',function(e){
+e.preventDefault();
+var n=document.getElementById('n').value,s=document.getElementById('s').value,m=document.getElementById('m').value;
+var txt='Name: '+n+'\nService: '+s+'\n\n'+m;var a=document.createElement('a');a.href='mailto:kananiparth038@gmail.com?subject='+encodeURIComponent(s+' — '+n)+'&body='+encodeURIComponent(m);openMail(a.href,s+' — '+n,m);
+});
+(function(){
+var b=document.body,ld=document.getElementById('ld'),c=document.getElementById('cnt'),lb=document.getElementById('lb'),pg=document.getElementById('pg');
+var red=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var pf=document.getElementById('pf');
+pf.innerHTML=pf.textContent.split('').map(function(ch,i){return '<span class="l" style="--i:'+i+'">'+ch+'</span>'}).join('');
+var hi=document.querySelectorAll('nav,.hero>small,.hero>h1,.hero>p,.hero>.btn');
+hi.forEach(function(e,i){e.classList.add('hi');e.style.setProperty('--i',i)});
+var items=document.querySelectorAll('section h2,.sub,.stats div,.card,.step,details');
+function count(el){var m=el.textContent.match(/^(\d+)(.*)$/);if(!m||red)return;var n=+m[1],s=m[2],t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1200);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+s;if(p<1)requestAnimationFrame(f)})(t0)}
+var io=null;
+if('IntersectionObserver' in window&&!red){
+io=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;var e=x.target;e.classList.add('in');var k=e.querySelector&&e.querySelector('b');if(k&&e.parentNode.classList.contains('stats'))count(k);io.unobserve(e);setTimeout(function(){e.style.transitionDelay=''},1500)})},{threshold:.15});
+}
+items.forEach(function(e){e.classList.add('rv');if(io){e.style.transitionDelay=(Array.prototype.indexOf.call(e.parentNode.children,e)%3*90)+'ms';io.observe(e)}else{e.classList.add('in')}});
+function done(){ld.classList.add('out');b.classList.remove('ld');b.classList.add('go');setTimeout(function(){ld.style.display='none'},1000);setTimeout(function(){hi.forEach(function(e){e.classList.remove('hi')})},3800)}
+var D=red?100:2200,t0=performance.now();
+(function tick(t){var p=Math.min(1,(t-t0)/D),v=Math.round((1-Math.pow(1-p,2))*100);c.textContent=v;lb.style.width=v+'%';document.getElementById('lt').textContent=v<35?'Importing footage…':v<70?'Syncing every beat…':v<100?'Cutting the first scene…':'Ready, action!';if(p<1)requestAnimationFrame(tick);else done()})(t0);
+addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;pg.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+})();
+</script>
+</body>
+</html>
